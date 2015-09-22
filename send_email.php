@@ -8,7 +8,7 @@
   <div class="">
     <?php
 
-      $to='j47lee@gmail.com';
+      $to='phishingg@gmail.com';
       $subject='How are you?';
       $body='Hey this is Jonathan. How are you doing?';
       $header='From: jonathan@gmail.com';
