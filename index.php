@@ -1,57 +1,25 @@
-<?php
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sending Email</title>
+  </head>
+  <body>
+  <div class="">
+    <?php
 
-  //basics =======================================
-  $test='I\'m a variable!';
-  $test2='Me too!';
-  $number=134;
-  $name='Jonathan';
-  $a='number';
+      $to='j47lee@gmail.com';
+      $subject='How are you?';
+      $body='Hey this is Jonathan. How are you doing?';
+      $header='From: jonathan@gmail.com';
 
-  echo 'My name is ' .$name;
-  echo '<br /><br />';
+      if (mail($to,$subject,$body,$header)) {
+        echo "Mail sent successfully";
+      } else {
+        echo "Mail not sent";
+      }
 
-  //arrays =======================================
-
-  //1st array --------------------------------
-  $myArray=array('Syria','Afghanistan','Libya');
-
-  print_r($myArray);
-  echo '<br />';
-  echo $myArray[1];
-  echo '<br /><br />';
-
-  //2nd array --------------------------------
-  $secondArray[key1]='United States';
-  $secondArray[key4]='India';
-
-  print_r($secondArray);
-  echo '<br />';
-  echo $secondArray[key4];
-  echo '<br />';
-
-  //adding to an existing array with empty key
-  $secondArray[]='France';
-  print_r($secondArray);
-  echo '<br /><br />';
-
-  //3rd array --------------------------------
-  $thirdArray=array(
-    'France' => 'French',
-    'USA' => 'English',
-    'Germany' => 'German'
-  );
-  print_r($thirdArray);
-  echo '<br />';
-  echo $thirdArray[Germany];
-  echo '<br />';
-
-  // removing string Germany from thirdArrat
-  unset($thirdArray['Germany']);
-  print_r($thirdArray);
-  echo '<br />';
-
-  //unset can be used on variables as well as arrays
-  unset($name);
-  echo $name;
-
-?>
+    ?>
+  </div>
+  </body>
+</html>
